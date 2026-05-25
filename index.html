@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasker - Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-layer-group"></i>
+            <h2>Tasker</h2>
+        </div>
+
+        <ul class="menu">
+            <li class="active"><i class="fa-solid fa-house"></i> Dashboard</li>
+            <li><a href="tasks.html"><i class="fa-solid fa-list-check"></i> Tasks</a></li>
+            <li><a href="analytics.html"><i class="fa-solid fa-chart-simple"></i> Analytics</a></li>
+            <li><a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a></li>
+        </ul>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div>
+                <h1>Dashboard</h1>
+                <p>Manage your daily tasks efficiently</p>
+            </div>
+
+            <div class="topbar-actions" id="authArea"></div>
+
+        </header>
+
+        <!-- STATS -->
+        <section class="stats-container">
+
+            <div class="card">
+                <h3>Total Tasks</h3>
+                <p id="totalTasks">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Completed</h3>
+                <p id="completedTasks">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Pending</h3>
+                <p id="pendingTasks">0</p>
+            </div>
+
+        </section>
+
+        <!-- ✅ ONLY ADD TASK BUTTON (NO QUICK ADD) -->
+        <div class="add-task-trigger">
+            <button class="add-task-btn" onclick="openModal()">
+                + Add Task
+            </button>
+        </div>
+
+        <!-- TASKS -->
+        <section class="task-section">
+
+            <div class="section-header">
+                <h2>Your Tasks</h2>
+            </div>
+
+            <div class="task-container" id="taskContainer"></div>
+
+        </section>
+
+    </main>
+
+    <!-- 💥 MODAL -->
+    <div class="modal" id="taskModal" onclick="outsideClick(event)">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h2>Create Task</h2>
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+            </div>
+
+            <form onsubmit="submitModalTask(event)">
+
+                <input type="text" id="modalTitle" placeholder="Task Title" required>
+
+                <textarea id="modalDescription" placeholder="Task Description"></textarea>
+
+                <input type="date" id="modalDate">
+
+                <select id="modalPriority">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+
+                <button type="submit">Create Task</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

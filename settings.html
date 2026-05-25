@@ -1,0 +1,158 @@
+<!-- settings.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tasker - Settings</title>
+
+    <link rel="stylesheet" href="settings.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-layer-group"></i>
+
+            <h2>Tasker</h2>
+
+        </div>
+
+        <ul class="menu">
+
+            <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="tasks.html">
+                    <i class="fa-solid fa-list-check"></i>
+                    Tasks
+                </a>
+            </li>
+
+            <li>
+                <a href="analytics.html">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    Analytics
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <div class="topbar">
+
+            <div>
+
+                <h1>Settings</h1>
+
+                <p>Manage your account and preferences</p>
+
+            </div>
+
+        </div>
+
+        <!-- SETTINGS SECTION -->
+
+        <section class="settings-section">
+
+            <div class="settings-card">
+
+                <h2>Profile Settings</h2>
+
+                <form>
+
+                    <input type="text" placeholder="Full Name">
+
+                    <input type="email" placeholder="Email Address">
+
+                    <input type="password" placeholder="New Password">
+
+                    <button type="submit">
+                        Save Changes
+                    </button>
+
+                </form>
+
+            </div>
+
+            <div class="settings-card">
+
+                <h2>Preferences</h2>
+
+                <div class="preference-item">
+
+                    <label>Email Notifications</label>
+
+                    <input type="checkbox">
+
+                </div>
+
+                <div class="preference-item">
+
+                    <label>Task Reminders</label>
+
+                    <input type="checkbox" checked>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- POPUP -->
+
+        <div class="popup" id="popup">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <div class="popup-content">
+
+                <h3 id="popupTitle">
+                    Success
+                </h3>
+
+                <p id="popupMessage">
+                    Profile updated successfully
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="settings.js"></script>
+
+</body>
+
+</html>

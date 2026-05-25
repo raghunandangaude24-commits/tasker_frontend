@@ -1,0 +1,102 @@
+/* auth.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#0f172a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    color:white;
+}
+
+/* container */
+.auth-container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    padding:20px;
+}
+
+/* box */
+.auth-box{
+    background:#111827;
+    padding:30px;
+    border-radius:16px;
+    width:340px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* headings */
+.auth-box h2{
+    margin-bottom:6px;
+    font-size:22px;
+}
+
+.auth-box p{
+    color:#94a3b8;
+    font-size:13px;
+    margin-bottom:15px;
+}
+
+/* message */
+#msg{
+    font-size:13px;
+    margin-bottom:10px;
+    color:#f87171;
+}
+
+/* inputs */
+input{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border:none;
+    border-radius:10px;
+    background:#1e293b;
+    color:white;
+    outline:none;
+}
+
+/* button */
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#3b82f6;
+    color:white;
+    cursor:pointer;
+    margin-top:10px;
+    font-size:15px;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#2563eb;
+}
+
+/* switch text */
+.switch{
+    margin-top:15px;
+    font-size:13px;
+    color:#94a3b8;
+}
+
+.switch a{
+    color:#3b82f6;
+    text-decoration:none;
+}
+
+.switch a:hover{
+    text-decoration:underline;
+}
